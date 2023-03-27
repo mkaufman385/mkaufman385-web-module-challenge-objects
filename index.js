@@ -137,9 +137,15 @@ Use the addReview function below to do the following:
   4. Return the updated array
 */
 
-function addReview(/*Your Code Here */) {
-  /*Your Code Here */
+// reviews.push({ name: "Billy", rating: 2, feedback: "Lame food!" });
+// console.log("task 5:", reviews);
+
+function addReview(array, name, rating, feedback) {
+  array.push({ name: name, rating: rating, feedback: feedback });
+  return array;
 }
+
+console.log("task:", addReview(reviews, "Billy", 2, "Lame Food"));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -151,9 +157,11 @@ Use the getReviewByIndex function below to do the following:
   For example: getReviewByIndex(reviews,0) would return: "Daniela gave the restaurant a 5 star review, and their feedback was: Beautiful atmosphere and wonderful vegan options!"
 */
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(array, number) {
+  return `${array[number].name} gave the restaurant a ${array[number].rating} star review, and their feedback was: ${array[number].feedback}`;
 }
+
+console.log("task 6:", getReviewByIndex(reviews, 4));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Write a function to get information about the most recent (last) review called `getLastReview`
@@ -167,9 +175,13 @@ Use the getLastReview function below to do the following:
   NOTE: her feedback should not be blank if task 4 was done correctly
 */
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(array) {
+  return `${array[array.length - 1].name} gave the restaurant a ${
+    array[array.length - 1].rating
+  } star review, and their feedback was: ${array[array.length - 1].feedback}`;
 }
+
+console.log("task 7:", getLastReview(reviews));
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
@@ -187,9 +199,43 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
-function getReviewByRating(/* code here */) {
-  /* code here */
-}
+// function getReviewByRating(array, rating) {
+//   let newArray2 = [];
+//   let newArray3 = [];
+//   let newArray4 = [];
+//   let newArray5 = [];
+//   let newArray6 = [];
+//   let newArray7 = [];
+//   for (let i = 0; i <= array.length; i++) {
+//     if (rating >= 0 && rating <= 0.9) {
+//       newArray2.push(array[i]);
+//     } else if (rating >= 1 && rating <= 1.9) {
+//       newArray3.push(array[i]);
+//     } else if (rating >= 2 && rating <= 2.9) {
+//       newArray4.push(array[i]);
+//     } else if (rating >= 3 && rating <= 3.9) {
+//       newArray5.push(array[i]);
+//     } else if (rating >= 4 && rating <= 4.9) {
+//       newArray6.push(array[i]);
+//     } else if (rating >= 5) {
+//       newArray7.push(array[i]);
+//     }
+//   }
+//   if (rating >= 0 && rating <= 0.9) {
+//     return newArray2;
+//   } else if (rating >= 1 && rating <= 1.9) {
+//     return newArray3;
+//   } else if (rating >= 2 && rating <= 2.9) {
+//     return newArray4;
+//   } else if (rating >= 3 && rating <= 3.9) {
+//     return newArray5;
+//   } else if (rating >= 4 && rating <= 4.9) {
+//     return newArray6;
+//   } else if (rating >= 5) {
+//     return newArray7;
+//   }
+// }
+// console.log(getReviewsByRating(reviews, 4));
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
 Use the getLongReviews function below to do the following:
@@ -204,9 +250,16 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-  /* code here */
-}
+// function getLongReviews(array) {
+//   let newArray = [];
+//   for (let i = 0; i <= array.length; i++) {
+//     if (array[i].feedback.length >= 15) {
+//       newArray.push(array[i]);
+//     }
+//   }
+//   return newArray;
+// }
+// console.log(getLongReviews(reviews));
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
